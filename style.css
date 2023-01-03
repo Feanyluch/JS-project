@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+/************* Universal styling *******************/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: rgb(30, 30, 114);
+    --button-background: rgb(243, 33, 33);
+    --border-color: rgb(202, 200, 200);
+    --add-button: rgb(171, 197, 243);
+    --white-color: #fff;
+}
+
+body, button, input {
+    font-family: 'Poppins', sans-serif;
+}
+
+input {
+    padding: 10px;
+    margin: 5px 0;
+    width: 90%;
+    border: none;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+}
+
+button{
+    cursor: pointer;
+}
+
+/*********************** FORM ELEMENTS STYLING  **********************/
+#form{
+    border: 2px solid var(--border-color);
+    margin: 20px;
+    background: rgb(70, 112, 201);
+    color: var(--white-color);
+}
+
+.form-header {
+    padding: 10px 20px;
+    border-bottom: 2px solid var(--border-color);
+    background: var(--primary-color);
+}
+
+.form-body-left{
+    display: flex;
+    flex-direction: column;
+}
+
+#form-body-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.form-body-left .left-form-body,
+.form-body-right .right-form-body {
+    margin-top: 25px;
+    border-top: 2px solid var(--border-color);
+    border-bottom: 2px solid var(--border-color);
+    padding: 10px;
+}
+
+.content1,
+.form-body-left .left-form-body,
+.left-form-body,
+.content2-input {
+    display: grid;
+}
+
+.content2-input {
+    margin: 10px;
+    grid-template-columns: 90% 10%;
+}
+
+.content1,
+.form-body-left .left-form-body {
+    grid-template-columns: 10% 90%;
+}
+
+.form-body-left .content1,
+.form-body-right .content2 {
+    margin: 10px;
+}
+
+/******************** BUTTON STYLING  *************/
+#slot_remove,
+#remove_group {
+    background: var(--button-background);
+    color: var(--white-color);
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+#slot_remove {
+    margin: 5px 15px;
+    width: fit-content;
+}
+
+#slot-btn {
+    background: var(--add-button);
+    border: none;
+    padding: 5px 10px;
+    margin: 15px 10px;
+}
+
+.add-group {
+    background: var(--primary-color);
+}
+
+.add-group-btn{
+    margin: 10px;
+    padding: 5px 10px;
+    border: none;
+    background: var(--add-button);
+}
+
+#remove_group{
+    margin: 10px;
+    width: fit-content;
+}
+
+
+/***************** RESPONSIVENESS STYLING  **************/
+
+@media screen and (max-width: 900px) {
+    #form-body-container{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
